@@ -1,15 +1,15 @@
 services:
   api1: &api
-    image: ghcr.io/lemesdaniel/floating-finch-zig:v5
+    image: ghcr.io/lemesdaniel/floating-finch-zig:v6
     platform: linux/amd64
     networks: [backend]
     environment:
       INDEX_PATH: /app/data/index.bin
       UDS_PATH: /sockets/api1.sock
-      IVF_NPROBE: "4"
+      IVF_NPROBE: "8"
       IVF_BBOX_REPAIR: "true"
-      IVF_REPAIR_MIN: "1"
-      IVF_REPAIR_MAX: "4"
+      IVF_REPAIR_MIN: "2"
+      IVF_REPAIR_MAX: "3"
     volumes:
       - sockets:/sockets
     security_opt:
@@ -21,7 +21,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.35"
+          cpus: "0.40"
           memory: "165MB"
 
   api2:
@@ -29,10 +29,10 @@ services:
     environment:
       INDEX_PATH: /app/data/index.bin
       UDS_PATH: /sockets/api2.sock
-      IVF_NPROBE: "4"
+      IVF_NPROBE: "8"
       IVF_BBOX_REPAIR: "true"
-      IVF_REPAIR_MIN: "1"
-      IVF_REPAIR_MAX: "4"
+      IVF_REPAIR_MIN: "2"
+      IVF_REPAIR_MAX: "3"
 
   nginx:
     image: nginx:1.27-alpine
@@ -55,7 +55,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
+          cpus: "0.18"
           memory: "20MB"
 
 volumes:
