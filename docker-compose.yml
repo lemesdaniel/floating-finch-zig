@@ -6,10 +6,10 @@ services:
     environment:
       INDEX_PATH: /app/data/index.bin
       UDS_PATH: /sockets/api1.sock
-      IVF_NPROBE: "1"
+      IVF_NPROBE: "4"
       IVF_BBOX_REPAIR: "true"
-      IVF_REPAIR_MIN: "0"
-      IVF_REPAIR_MAX: "5"
+      IVF_REPAIR_MIN: "1"
+      IVF_REPAIR_MAX: "4"
     volumes:
       - sockets:/sockets
     security_opt:
@@ -29,10 +29,10 @@ services:
     environment:
       INDEX_PATH: /app/data/index.bin
       UDS_PATH: /sockets/api2.sock
-      IVF_NPROBE: "1"
+      IVF_NPROBE: "4"
       IVF_BBOX_REPAIR: "true"
-      IVF_REPAIR_MIN: "0"
-      IVF_REPAIR_MAX: "5"
+      IVF_REPAIR_MIN: "1"
+      IVF_REPAIR_MAX: "4"
 
   nginx:
     image: nginx:1.27-alpine
