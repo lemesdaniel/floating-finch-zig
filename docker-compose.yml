@@ -6,7 +6,7 @@ services:
     environment:
       INDEX_PATH: /app/data/index.bin
       UDS_PATH: /sockets/api1.sock
-      IVF_NPROBE: "4"
+      IVF_NPROBE: "1"
       IVF_BBOX_REPAIR: "true"
       IVF_REPAIR_MIN: "1"
       IVF_REPAIR_MAX: "4"
@@ -29,7 +29,7 @@ services:
     environment:
       INDEX_PATH: /app/data/index.bin
       UDS_PATH: /sockets/api2.sock
-      IVF_NPROBE: "4"
+      IVF_NPROBE: "1"
       IVF_BBOX_REPAIR: "true"
       IVF_REPAIR_MIN: "1"
       IVF_REPAIR_MAX: "4"
