@@ -8,8 +8,8 @@ services:
       UDS_PATH: /sockets/api1.sock
       IVF_NPROBE: "1"
       IVF_BBOX_REPAIR: "true"
-      IVF_REPAIR_MIN: "1"
-      IVF_REPAIR_MAX: "4"
+      IVF_REPAIR_MIN: "0"
+      IVF_REPAIR_MAX: "5"
     volumes:
       - sockets:/sockets
     security_opt:
@@ -31,8 +31,8 @@ services:
       UDS_PATH: /sockets/api2.sock
       IVF_NPROBE: "1"
       IVF_BBOX_REPAIR: "true"
-      IVF_REPAIR_MIN: "1"
-      IVF_REPAIR_MAX: "4"
+      IVF_REPAIR_MIN: "0"
+      IVF_REPAIR_MAX: "5"
 
   nginx:
     image: nginx:1.27-alpine
