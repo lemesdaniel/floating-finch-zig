@@ -1,12 +1,17 @@
 services:
   api1: &api
-    image: ghcr.io/lemesdaniel/floating-finch-zig:v8
+    image: ghcr.io/lemesdaniel/floating-finch-zig:v16
     platform: linux/amd64
     networks: [backend]
     environment:
       INDEX_PATH: /app/data/index.bin
       UDS_PATH: /sockets/api1.sock
       IVF_NPROBE: "4"
+      IVF_FAST_PROBE: "4"
+      IVF_RESCUE_PROBE: "8"
+      IVF_SHORTLIST: "16"
+      IVF_AMBIG_MIN: "2"
+      IVF_AMBIG_MAX: "3"
       IVF_BBOX_REPAIR: "true"
       IVF_REPAIR_MIN: "1"
       IVF_REPAIR_MAX: "4"
@@ -30,6 +35,11 @@ services:
       INDEX_PATH: /app/data/index.bin
       UDS_PATH: /sockets/api2.sock
       IVF_NPROBE: "4"
+      IVF_FAST_PROBE: "4"
+      IVF_RESCUE_PROBE: "8"
+      IVF_SHORTLIST: "16"
+      IVF_AMBIG_MIN: "2"
+      IVF_AMBIG_MAX: "3"
       IVF_BBOX_REPAIR: "true"
       IVF_REPAIR_MIN: "1"
       IVF_REPAIR_MAX: "4"
