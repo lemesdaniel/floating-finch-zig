@@ -8,11 +8,11 @@ services:
       UDS_PATH: /sockets/api1.sock
       IVF_NPROBE: "4"
       IVF_FAST_PROBE: "5"
-      IVF_RESCUE_PROBE: "24"
+      IVF_RESCUE_PROBE: "12"
       IVF_SHORTLIST: "32"
-      IVF_AMBIG_MIN: "1"
-      IVF_AMBIG_MAX: "4"
-      IVF_BBOX_REPAIR: "false"
+      IVF_AMBIG_MIN: "2"
+      IVF_AMBIG_MAX: "3"
+      IVF_BBOX_REPAIR: "true"
       IVF_REPAIR_MIN: "1"
       IVF_REPAIR_MAX: "4"
     volumes:
@@ -36,11 +36,11 @@ services:
       UDS_PATH: /sockets/api2.sock
       IVF_NPROBE: "4"
       IVF_FAST_PROBE: "5"
-      IVF_RESCUE_PROBE: "24"
+      IVF_RESCUE_PROBE: "12"
       IVF_SHORTLIST: "32"
-      IVF_AMBIG_MIN: "1"
-      IVF_AMBIG_MAX: "4"
-      IVF_BBOX_REPAIR: "false"
+      IVF_AMBIG_MIN: "2"
+      IVF_AMBIG_MAX: "3"
+      IVF_BBOX_REPAIR: "true"
       IVF_REPAIR_MIN: "1"
       IVF_REPAIR_MAX: "4"
 
