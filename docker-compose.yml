@@ -1,6 +1,6 @@
 services:
   api1: &api
-    image: ghcr.io/lemesdaniel/floating-finch-zig:v22
+    image: ghcr.io/lemesdaniel/floating-finch-zig:v8
     platform: linux/amd64
     networks: [backend]
     environment:
